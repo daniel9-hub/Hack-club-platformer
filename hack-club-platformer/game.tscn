@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://b0wrcqtf5mob1"]
+
+[ext_resource type="PackedScene" uid="uid://bl35ts44i3jpi" path="res://player.tscn" id="1_80nbo"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_80nbo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bx3dq"]
+size = Vector2(1115, 115)
+
+[node name="Node2D" type="Node2D" unique_id=1112656028]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1562396543]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D" unique_id=1779531011]
+position = Vector2(-1.500061, 57.25)
+scale = Vector2(1114.9999, 115.5)
+mesh = SubResource("BoxMesh_80nbo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2101283050]
+position = Vector2(-1.5, 57.5)
+shape = SubResource("RectangleShape2D_bx3dq")
+debug_color = Color(0.2823368, 0.49978983, 1, 0.41960785)
+
+[node name="CharacterBody2D" parent="." unique_id=1436408281 instance=ExtResource("1_80nbo")]
+position = Vector2(-131, -324)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=141350014]
+position = Vector2(-2, -191)

@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bl35ts44i3jpi"]
+
+[ext_resource type="Script" uid="uid://mvqjvka384dw" path="res://player.gd" id="1_4flbx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bx3dq"]
+size = Vector2(123, 186)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bx3dq"]
+
+[sub_resource type="GDScript" id="GDScript_sh265"]
+script/source = "extends MeshInstance2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="player" type="CharacterBody2D" unique_id=1436408281]
+script = ExtResource("1_4flbx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=761854342]
+position = Vector2(62, 93)
+shape = SubResource("RectangleShape2D_bx3dq")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1951582423]
+position = Vector2(62, 93.0625)
+scale = Vector2(123.749985, 186.125)
+mesh = SubResource("BoxMesh_bx3dq")
+script = SubResource("GDScript_sh265")
